@@ -1,0 +1,27 @@
+/* DESAFIO 1
+EQUIPE DE PRODUÇÃO DE PRODUTOS PRECISA DO NOME DE TODAS
+AS PEÇAS QUE PESAM MAIS QUE 500KG MAS NÃO MAIS QUE 700KG */
+
+SELECT *
+FROM production.Product
+WHERE Weight > '500' and Weight <= '700';
+
+/* DESAFIO 2
+FOI PEDIDO PELO MARKETING UMA RELAÇÃO DE TODOS OS EMPREGADOS
+QUE SÃO CASADOS E SÃO ASALARIADOS */
+
+SELECT *
+FROM HumanResources.Employee
+WHERE MaritalStatus = 'M' and SalariedFlag = '1';
+
+/*	DESAFIO 3
+UM USUÁRIO CHAMADO PETER KREBS ESTÁ DEVENDO UM PAGAMENTO,
+CONSIGA O EMAIL DELE PARA ENVIAR COBRANÇA */
+
+SELECT BusinessEntityID
+FROM person.Person
+WHERE FirstName = 'peter' and LastName = 'krebs';
+
+SELECT EmailAddress
+FROM person.EmailAddress
+WHERE BusinessEntityID = '26';
